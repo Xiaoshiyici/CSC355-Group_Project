@@ -23,25 +23,20 @@ target_hue=0
 
 class imageChange:
     def enhance_Color(photo,int):
-
         enhance_color = ImageEnhance.Color(photo)
 
         enhance = enhance_color.enhance(int)
 
-        print("enhance_photo mode", enhance.mode)
-        print("enhance_photo size", enhance.size)
-
         enhance.show()
+        return enhance
 
     def enhance_Brightness(photo,int):
         enhance_brightness = ImageEnhance.Brightness(photo)
 
         enhance = enhance_brightness.enhance(int)
 
-        print("enhance_photo mode", enhance.mode)
-        print("enhance_photo size", enhance.size)
-
         enhance.show()
+        return enhance
 
     def enhance_Contrast(photo,int):
 
@@ -49,10 +44,8 @@ class imageChange:
 
         enhance = enhance_contrast.enhance(int)
 
-        print("enhance_photo mode", enhance.mode)
-        print("enhance_photo size", enhance.size)
-
         enhance.show()
+        return enhance
 
     def enhance_Sharpness(photo,int):
 
@@ -60,67 +53,52 @@ class imageChange:
 
         enhance = enhance_sharpness.enhance(int)
 
-        print("enhance_photo mode", enhance.mode)
-        print("enhance_photo size", enhance.size)
-
         enhance.show()
+        return enhance
 
     def filter_Contour(photo):
         #  perform contour filtering on the image
         filter_contour = photo.filter(ImageFilter.CONTOUR)
 
-        print("filter_contour_photo mode", filter_contour.mode)
-        print("enhance_contour_photo size", filter_contour.size)
 
         filter_contour.show()
+        return filter_contour
 
     def filter_Detail(photo):
         filter_detail = photo.filter(ImageFilter.DETAIL)
 
-        print("filter_contour_photo mode", filter_detail.mode)
-        print("enhance_contour_photo size", filter_detail.size)
-
         filter_detail.show()
+        return filter_detail
 
     def filter_Blur(photo):
         filter_blur = photo.filter(ImageFilter.BLUR)
 
-        print("filter_contour_photo mode", filter_blur.mode)
-        print("enhance_contour_photo size", filter_blur.size)
-
         filter_blur.show()
+        return filter_blur
 
     def filter_Smooth(photo):
         filter_smooth = photo.filter(ImageFilter.SMOOTH)
 
-        print("filter_contour_photo mode", filter_smooth.mode)
-        print("enhance_contour_photo size", filter_smooth.size)
-
         filter_smooth.show()
+        return filter_smooth
 
     def filter_Sharpen(photo):
         filter_sharpen = photo.filter(ImageFilter.SHARPEN)
 
-        print("filter_contour_photo mode", filter_sharpen.mode)
-        print("enhance_contour_photo size", filter_sharpen.size)
-
         filter_sharpen.show()
+        return filter_sharpen
 
     def filter_Emboss(photo):
         filter_emboss = photo.filter(ImageFilter.EMBOSS)
 
-        print("filter_contour_photo mode", filter_emboss.mode)
-        print("enhance_contour_photo size", filter_emboss.size)
-
         filter_emboss.show()
+        return filter_emboss
 
     def filter_GaussianBlur(photo, int):
         filter_gaussianBlur = photo.filter(ImageFilter.GaussianBlur(int))
 
-        print("filter_contour_photo mode", filter_gaussianBlur.mode)
-        print("enhance_contour_photo size", filter_gaussianBlur.size)
-
         filter_gaussianBlur.show()
+        return filter_gaussianBlur
 
     def convert_RGB_to_HSV(photo):
 
@@ -165,7 +143,7 @@ class imageChange:
         new_photo = Image.merge('RGB', (r, g, b))
 
         new_photo.show()
-
+        return new_photo
 
 
 
