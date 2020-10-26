@@ -1,4 +1,4 @@
-#Mingyuan Gao
+#Mingyuan_Gao
 #Professor Leon Tabak
 #blend image
 
